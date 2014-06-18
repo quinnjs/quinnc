@@ -1,6 +1,6 @@
 {
   "name": "quinnc",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "ES6 compiler, built for quinn",
   "main": "quinnc.js",
   "bin": "cli.js",
