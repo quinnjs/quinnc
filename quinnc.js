@@ -14,7 +14,7 @@ var classes = getDefaultVisitors('class');
 var templates = getDefaultVisitors('template');
 var restParam = getDefaultVisitors('rest-param');
 var modules = require('es6-module-jstransform');
-// var destruct = require('es6-destructuring-jstransform');
+var destructuring = getDefaultVisitors('destructuring');
 
 module.exports = function quinnCompile(source, options) {
   // Needed to reset the counter that generate unique ids.
@@ -31,7 +31,7 @@ module.exports = function quinnCompile(source, options) {
   return transform(
     [].concat(
       modules.visitorList,
-      // destruct.visitorList, // buggy :(
+      destructuring,
       arrow,
       classes,
       templates,
